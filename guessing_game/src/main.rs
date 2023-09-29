@@ -8,7 +8,7 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-        println!("Please input your guess between 1-100...");
+        println!("The secret number is within the range: 1..=100");
 
         let mut guess = String::new();
 
@@ -18,7 +18,10 @@ fn main() {
 
         let guess: u8 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {
+                println!("Invalid input. Please enter a number.");
+                continue;
+            }
         };
 
         println!("You guessed: {guess}");
