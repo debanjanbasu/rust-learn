@@ -2,12 +2,15 @@
 name = "dioxus-demo-fullstack"
 version = "0.1.0"
 edition = "2021"
+resolver = "2"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 dioxus = "0.4.0"
 dioxus-fullstack = "0.4.1"
+serde = "1.0.188"
+tokio = { version = "1.33.0", features = ["full"] }
 
 [features]
 default = []
